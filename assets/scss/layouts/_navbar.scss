@@ -1,0 +1,107 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $white;
+  padding: 0.5em 0;
+
+  &-container {
+    width: $container-full;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &-item__wrapper {
+    border-top: solid 1px $black-04;
+    flex-direction: column;
+    display: none;
+  }
+
+  &.open {
+    .navbar-item__wrapper {
+      display: flex;
+    }
+  }
+
+  &-item {
+    padding: 0.75em 1em;
+    border-radius: 4px;
+    font-weight: $fw-semibold;
+    font-size: $fs-base;
+    color: $primary;
+
+    &:hover {
+      background-color: $black-04;
+    }
+
+    &.navbar-brand {
+      margin-bottom: 4px;
+
+      &:hover {
+        background-color: initial;
+      }
+    }
+  }
+
+  &-ham {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    margin-right: 8px;
+    display: flex;
+
+    &.btn {
+      padding: 8px;
+    }
+
+    svg {
+      margin: auto;
+      width: 24px;
+    }
+  }
+
+}
+
+@media screen and (min-width: $display-md) {
+  .navbar {
+    &-container {
+      width: $container-md;
+      flex-direction: row;
+    }
+
+    &-item__wrapper {
+      display: flex;
+      flex-direction: row;
+      border: none;
+      margin-left: auto;
+    }
+
+    &-item {
+      &.navbar-brand {
+        margin: 0;
+      }
+    }
+
+    &-ham {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $display-lg) {
+  .navbar {
+    &-container {
+      width: $container-lg;
+    }
+  }
+}
+
+@media screen and (min-width: $display-xl) {
+  .navbar {
+    &-container {
+      width: $container-xl;
+    }
+  }
+}

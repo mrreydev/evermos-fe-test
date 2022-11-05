@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+@each $name, $value in $containers {
+  .container-#{$name} {
+    width: $value;
+  }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+.font-poppins {
+  font-family: $font-poppins;
+}
+
+.font-opensans {
+  font-family: $font-poppins;
+}
+
+@each $nameS, $size in $font-sizes {
+  @each $nameW, $weight in $font-weights {
+    .font-#{$nameS}-#{$nameW} {
+      font-size: $size !important;
+      font-weight: $weight;
+    }
+  }
+}
+
+* {
+  font-family: $font-opensans;
+}
+
+h1,h2,h3,h4,h5,h6,button {
+  font-family: $font-poppins;
+}

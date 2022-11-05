@@ -1,4 +1,10 @@
 <!-- Please remove this file from your project -->
+<script>
+export default {
+  name: 'NuxtTutorial',
+}
+</script>
+
 <template>
   <div
     class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
@@ -51,7 +57,7 @@
         </svg>
       </a>
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="text-2xl leading-7 font-semibold">
+        <h2 class="text-2xl leading-7 font-poppins">
           Welcome to your Nuxt Application
         </h2>
         <p class="mt-3 text-gray-600">
@@ -114,9 +120,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'NuxtTutorial',
-}
-</script>

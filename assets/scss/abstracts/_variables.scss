@@ -1,0 +1,74 @@
+// * Display * //
+$display-2xl: 1400px;
+$display-xl: 1200px;
+$display-lg: 992px;
+$display-md: 768px;
+$display-sm: 576px;
+
+// * Colors * //
+$primary: #6C5CE7;
+$dark-gray: #222F3E;
+$gray: #8395A7;
+$white: #fff;
+$black-01: rgba(0, 0, 0, 0.9);
+$black-02: rgba(0, 0, 0, 0.6);
+$black-03: rgba(0, 0, 0, 0.3);
+$black-04: rgba(0, 0, 0, 0.1);
+
+
+// * Fonts * //
+// * Font Family
+$font-poppins: 'Poppins';
+$font-opensans: 'Open Sans';
+
+// * Font Family
+$fs-3xl: 40px;
+$fs-2xl: 32px;
+$fs-xl: 24px;
+$fs-lg: 20px;
+$fs-base: 1em;
+$fs-sm: 14px;
+$fs-xs: 12px;
+
+$font-sizes: (
+  "3xl": $fs-3xl,
+  "2xl": $fs-2xl,
+  "xl": $fs-xl,
+  "lg": $fs-lg,
+  "base": $fs-base,
+  "sm": $fs-sm,
+  "xs": $fs-xs
+);
+
+// * Font Weight
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$font-weights: (
+  "normal": $fw-normal,
+  "semibold": $fw-semibold,
+  "bold": $fw-bold
+);
+
+
+// * Container * //
+$container-full: 100%;
+$container-xl: 1200px;
+$container-lg: 960px;
+$container-md: 720px;
+$container-sm: 540px;
+
+$containers: (
+  "full": $container-full,
+  "xl": $container-xl,
+  "lg": $container-lg,
+  "md": $container-md,
+  "sm": $container-sm
+);
+
+
+// * Buttons * //
+$btn-pd-lg: 14px 20px;
+$btn-pd-md: 12px 16px;
+$btn-pd-sm: 10px 16px;
