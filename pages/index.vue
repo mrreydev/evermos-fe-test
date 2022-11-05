@@ -12,5 +12,6 @@ export default {
 <template>
   <div class="main">
     <BaseNavbarMain />
+    <CarouselMain />
   </div>
 </template>

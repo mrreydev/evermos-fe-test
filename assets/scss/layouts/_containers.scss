@@ -1,0 +1,23 @@
+@each $name, $value in $containers {
+  .container-#{$name} {
+    width: $value;
+    margin: auto;
+  }
+}
+
+.container {
+  width: $container-full;
+  margin: auto;
+
+  @media screen and (min-width: $display-md) {
+    width: $container-md;
+  }
+
+  @media screen and (min-width: $display-lg) {
+    width: $container-lg;
+  }
+
+  @media screen and (min-width: $display-xl) {
+    width: $container-xl;
+  }
+}
