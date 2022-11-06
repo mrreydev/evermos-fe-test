@@ -1,27 +1,20 @@
 <script>
   export default {
+    props: {
+      brands: {
+        type: Array,
+        default: () => ([])
+      }
+    },
     data() {
       return {
-        brands: [
-          {
-            param: 'nike',
-            name: 'Nike'
-          },
-          {
-            param: 'adidas',
-            name: 'Adidas'
-          },
-          {
-            param: 'puma',
-            name: 'Puma'
-          }
-        ],
-        active: 'nike'
+        active: ''
       }
     },
     methods: {
       handleClick(value) {
         this.active = value
+        this.$emit('filter-change', value)
       }
     }
   }
@@ -29,7 +22,7 @@
 
 <template>
   <div class="list list-wrapper">
-    <a v-for="(brand, index) in brands" :key="index" href="#" class="list-item" :class="{'active': brand.param === active}" @click.prevent="handleClick(brand.param)">
+    <a v-for="(brand, index) in brands" :key="index" href="#" class="list-item" :class="{'active': brand.slug === $route.query.brand}" @click.prevent="handleClick(brand.slug)">
       {{ brand.name }}
     </a>
   </div>

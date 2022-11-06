@@ -33,9 +33,9 @@
 <template>
   <div class="navbar" :class="{'open': open}">
     <div class="navbar-container">
-      <div class="navbar-item navbar-brand">
+      <NuxtLink to="/" class="navbar-item navbar-brand">
         Hoops Essentials
-      </div>
+      </NuxtLink>
       <div class="navbar-item__wrapper">
         <NuxtLink v-for="(menu, index) in menus" :key="index" :to="menu.link" class="navbar-item">
           {{ menu.text }}

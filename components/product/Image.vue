@@ -1,15 +1,20 @@
 <template>
   <div class="product-image-wrapper">
-    <img src="/images/products/jersey-1.jpg" class="product-image" alt="product-img">
-    <div class="preview-wrapper">
+    <img :src="`/images/products/${product.image}.jpg`" class="product-image" alt="product-img">
+    <!-- <div class="preview-wrapper">
       <img v-for="i in 3" :key="i" :src="`/images/products/jersey-${(i+1)}.jpg`" alt="preview-image" class="preview-image">
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
   export default {
-
+    props: {
+      product: {
+        type: Object,
+        default: () => ({})
+      }
+    }
   }
 </script>
 

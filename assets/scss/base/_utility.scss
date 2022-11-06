@@ -2,4 +2,32 @@
   .mb-#{$margin} {
     margin-bottom: $value;
   }
+
+  .mr-#{$margin} {
+    margin-right: $value;
+  }
+
+  .ml-#{$margin} {
+    margin-left: $value;
+  }
+
+  .mt-#{$margin} {
+    margin-top: $value;
+  }
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
 }

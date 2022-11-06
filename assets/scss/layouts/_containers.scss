@@ -62,32 +62,32 @@
 
 .grid-container-5 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 12px;
 
   @media screen and (min-width: $display-md) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media screen and (min-width: $display-lg) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media screen and (min-width: $display-xl) {
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 .grid-container-4 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 12px;
 
   @media screen and (min-width: $display-md) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media screen and (min-width: $display-lg) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

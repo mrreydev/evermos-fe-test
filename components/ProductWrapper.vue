@@ -4,6 +4,10 @@
       column: {
         type: Number,
         default: 5
+      },
+      products: {
+        type: Array,
+        default: () => ([])
       }
     }
   }
@@ -11,7 +15,7 @@
 
 <template>
   <div :class="`grid-container-${column}`">
-    <BaseCardProduct v-for="i in 10" :key="i" />
+    <BaseCardProduct v-for="(product, i) in products" :key="i" :product="product"/>
   </div>
 </template>
 

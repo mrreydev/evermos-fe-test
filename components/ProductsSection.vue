@@ -1,20 +1,18 @@
 <script>
-  export default {
-    props: {
-        column: {
-            type: Number,
-            default: 5
-        }
-    }
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters('Product', ['getProductsOnly'])
+  }
 }
 </script>
 
 <template>
   <div class="container">
-    <h2 class="mb-16">
+    <h2 class="mb-24 text-center">
       Produk Terlaris
     </h2>
-    <ProductWrapper />
+    <ProductWrapper :column="5" :products="getProductsOnly" />
   </div>
 </template>
 

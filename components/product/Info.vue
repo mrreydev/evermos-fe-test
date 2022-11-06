@@ -1,21 +1,21 @@
 <template>
   <div class="product-info-wrapper">
     <h5 class="product-info__brand">
-      Nike
+      {{ product.brand || '-' }}
     </h5>
     <p class="product-info__name">
-      Pelicans Statement Jersey
+      {{ product.name || '-' }}
     </p>
     <p class="product-info__stats">
       Sold (12) | Views (85) | Wishlist(1)
     </p>
     <h4 class="product-info__price">
-      Rp999.000
+      {{ formatRupiah(product.price) || '-' }}
     </h4>
-    <div class="product-info__variant">
+    <div v-if="product.variants && product.variants.length" class="product-info__variant">
       <p class="mb-8 font-base-normal">Varian</p>
       <div class="variants">
-        <BaseRadioVariant v-for="(variant, index) in variants" :key="index" v-model="selectedVar" :label="variant.label" :value="variant.value" />
+        <BaseRadioVariant v-for="(variant, index) in product.variants" :key="index" v-model="selectedVar" :label="variant" :value="variant" />
       </div>
     </div>
     <div class="d-flex">
@@ -27,7 +27,15 @@
 </template>
 
 <script>
+import mixin from '@/mixins'
   export default {
+    mixins: [mixin],
+    props: {
+      product: {
+        type: Object,
+        default: () => ({})
+      }
+    },
     data() {
       return {
         selectedVar: '',
@@ -53,10 +61,11 @@
 <style lang="scss" scoped>
 .product-info {
   &-wrapper {
-    margin: auto 0;
+    margin: auto;
   }
 
   &__brand {
+    text-transform: capitalize;
     font-size: $fs-sm;
     font-weight: $fw-bold;
     margin-bottom: 8px
