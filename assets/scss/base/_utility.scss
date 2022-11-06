@@ -1,0 +1,5 @@
+@each $margin, $value in $margins {
+  .mb-#{$margin} {
+    margin-bottom: $value;
+  }
+}

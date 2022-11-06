@@ -5,6 +5,22 @@ $display-lg: 992px;
 $display-md: 768px;
 $display-sm: 576px;
 
+$display-sizes: (
+  "2xl": $display-2xl,
+  "xl": $display-xl,
+  "lg": $display-lg,
+  "md": $display-md,
+  "sm": $display-sm,
+);
+
+// * Margins * //
+$margins: (
+  "4": 4px,
+  "8": 8px,
+  "16": 16px,
+  "24": 24px
+);
+
 // * Colors * //
 $primary: #6C5CE7;
 $dark-gray: #222F3E;
@@ -72,3 +88,16 @@ $containers: (
 $btn-pd-lg: 14px 20px;
 $btn-pd-md: 12px 16px;
 $btn-pd-sm: 10px 16px;
+
+
+// * Flex Basis * //
+$flex-basises: (
+  "10": 10%,
+  "20": 20%,
+  "25": 25%,
+  "33": 33.33333%,
+  "50": 50%,
+  "75": 75%,
+  "80": 80%,
+  "100": 100%
+);

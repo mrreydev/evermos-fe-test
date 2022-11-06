@@ -20,4 +20,73 @@
   @media screen and (min-width: $display-xl) {
     width: $container-xl;
   }
+
+  &-padding {
+    padding: 32px 0;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 0 -1em;
+}
+
+@each $basis, $value in $flex-basises {
+  @each $display, $valueDis in $display-sizes {
+    @media screen and (min-width:$valueDis) {
+      .box-#{$basis}-#{$display} {
+        width: $value;
+        margin: 0 1em;
+      }
+    }
+  }
+
+  .box-#{$basis} {
+    width: $value;
+    margin: 0 1em;
+  }
+
+}
+
+.grid-container-5 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+
+  @media screen and (min-width: $display-md) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media screen and (min-width: $display-lg) {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  @media screen and (min-width: $display-xl) {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+
+  @media screen and (min-width: $display-md) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media screen and (min-width: $display-lg) {
+    grid-template-columns: auto auto auto auto;
+  }
 }

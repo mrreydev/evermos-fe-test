@@ -3,10 +3,10 @@
     data() {
       return {
         images: [
-          '/carousel/1.jpg',
-          '/carousel/2.jpg',
-          '/carousel/3.jpg',
-          '/carousel/4.jpg'
+          '/images/carousel/1.jpg',
+          '/images/carousel/2.jpg',
+          '/images/carousel/3.jpg',
+          '/images/carousel/4.jpg'
         ],
         timer: null,
         currentIndex: 0,
@@ -54,8 +54,8 @@
         <img ref="imgPreview" :src="currentImg" style="width: 100%;"/>
       </div>
     </transition-group>
-    <a class="prev" href="#" @click="prev">&#10094;</a>
-    <a class="next" href="#" @click="next">&#10095;</a>
+    <a class="prev" href="#" @click.prevent="prev">&#10094;</a>
+    <a class="next" href="#" @click.prevent="next">&#10095;</a>
   </div>
 </template>
 

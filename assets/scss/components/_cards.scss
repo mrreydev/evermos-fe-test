@@ -1,4 +1,27 @@
 .card {
   display: flex;
   flex-direction: column;
+  border: solid 1px $black-04;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
+    padding: 16px;
+
+    &__title, &__text {
+      color: $black-01;
+      font-size: $fs-base;
+      margin-bottom: 8px;
+    }
+
+    &__price {
+      font-size: $fs-base;
+      color: $primary;
+      font-weight: $fw-semibold;
+    }
+  }
 }
