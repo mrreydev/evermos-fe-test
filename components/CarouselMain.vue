@@ -10,7 +10,7 @@
         ],
         timer: null,
         currentIndex: 0,
-        imageHeight: '600px'
+        imageHeight: '584px'
       }
     },
     computed: {
@@ -40,7 +40,7 @@
         if (process.client && this.$refs.imgPreview) {
           const img = this.$refs.imgPreview[0]
           const height = img.offsetHeight || 0
-          this.imageHeight = height === 0 ? '600px' : `${img.offsetHeight}px`
+          this.imageHeight = height === 0 ? '584px' : `${img.offsetHeight}px`
         }
       }
     }
@@ -48,7 +48,7 @@
 </script>
 
 <template>
-  <div class="container carousel">
+  <div class="container container-padding carousel">
     <transition-group name="fade" tag="div" class="carousel-wrapper" :style="`height: ${imageHeight};`">
       <div v-for="i in [currentIndex]" :key="i">
         <img ref="imgPreview" :src="currentImg" style="width: 100%;"/>

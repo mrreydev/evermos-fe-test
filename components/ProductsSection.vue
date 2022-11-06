@@ -10,7 +10,10 @@
 </script>
 
 <template>
-  <div class="container container-padding">
+  <div class="container">
+    <h2 class="mb-16">
+      Produk Terlaris
+    </h2>
     <ProductWrapper />
   </div>
 </template>

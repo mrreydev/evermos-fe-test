@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <NuxtLink to="#" class="card">
+  <NuxtLink to="/products/1" class="card">
     <img src="/images/products/nike-1.jpg" alt="Nike 1" class="card-img">
     <div class="card-info">
       <h5 class="card-info__title">Nike</h5>

@@ -4,4 +4,16 @@
   border: none;
   display: inline-block;
   padding: $btn-pd-sm;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: $fs-sm;
+  transition: 0.15 all;
+  border-radius: 4px;
+
+  &-primary {
+    background-color: $primary;
+    color: $white;
+  }
 }
