@@ -5,18 +5,13 @@
         menus: [
           {
             id: 1,
-            link: '/sneakers',
-            text: 'Sneakers'
+            link: '/',
+            text: 'Beranda'
           },
           {
             id: 2,
-            link: '/jerseys',
-            text: 'Jerseys'
-          },
-          {
-            id: 3,
-            link: '/accessories',
-            text: 'Accessories'
+            link: '/products',
+            text: 'Katalog'
           }
         ],
         open: false
@@ -31,7 +26,7 @@
 </script>
 
 <template>
-  <div class="navbar" :class="{'open': open}">
+  <nav class="navbar" :class="{'open': open}">
     <div class="navbar-container">
       <NuxtLink to="/" class="navbar-item navbar-brand">
         Hoops Essentials
@@ -47,7 +42,7 @@
         </svg>
       </button>
     </div>
-  </div>
+  </nav>
 </template>
 
 <style lang="scss" scoped>

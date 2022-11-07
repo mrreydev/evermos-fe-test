@@ -8,12 +8,12 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <section id="products" class="container">
     <h2 class="mb-24 text-center">
       Produk Terlaris
     </h2>
     <ProductWrapper :column="5" :products="getProductsOnly" />
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

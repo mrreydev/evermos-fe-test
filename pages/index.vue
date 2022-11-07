@@ -3,6 +3,11 @@ export default {
   name: 'IndexPage',
   async asyncData({ params, store }) {
       try {
+        await store.dispatch('Brand/getBrands', {
+          params: {
+            _limit: 5
+          }
+        })
         const payload = {
           params: {
             _limit: 10

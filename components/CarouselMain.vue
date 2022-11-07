@@ -48,12 +48,14 @@
 </script>
 
 <template>
-  <div class="container container-padding carousel">
-    <transition-group name="fade" tag="div" class="carousel-wrapper" :style="`height: ${imageHeight};`">
-      <div v-for="i in [currentIndex]" :key="i">
-        <img ref="imgPreview" :src="currentImg" style="width: 100%;"/>
-      </div>
-    </transition-group>
+  <div class="container carousel">
+    <a href="#products">
+      <transition-group name="fade" tag="div" class="carousel-wrapper" :style="`height: ${imageHeight};`">
+        <div v-for="i in [currentIndex]" :key="i">
+          <img ref="imgPreview" :src="currentImg" style="width: 100%;"/>
+        </div>
+      </transition-group>
+    </a>
     <a class="prev" href="#" @click.prevent="prev">&#10094;</a>
     <a class="next" href="#" @click.prevent="next">&#10095;</a>
   </div>
@@ -62,6 +64,7 @@
 <style lang="scss" scoped>
 .carousel {
   position: relative;
+  padding: 0;
 
   @media screen and (min-width: $display-md) {
     padding-top: 24px;

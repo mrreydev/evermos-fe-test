@@ -45,13 +45,15 @@ export default {
     },
     handleFilterChange(brand) {
       this.setQuery({
-        brand
+        brand,
+        page: 1
       })
     },
     handleInputSearch(value) {
       setTimeout(() => {
         this.setQuery({
-          q: value
+          q: value,
+          page: 1
         })
       }, 1000);
     }
@@ -60,10 +62,10 @@ export default {
 </script>
 
 <template>
-  <div class="container container-padding product-catalogue">
-    <div class="flex-column">
+  <div class="container product-catalogue">
+    <div class="flex-column height-100vh">
       <div class="flex-row">
-        <div class="filter-wrapper">
+        <div class="filter-wrapper mb-24">
           <h3 class="mb-16">Brands</h3>
           <FilterBrand :brands="getBrands" @filter-change="handleFilterChange" />
         </div>
@@ -98,13 +100,9 @@ export default {
     flex-direction: column;
     margin: 0;
 
-    @media screen and (min-width: $display-lg) {
-      flex-direction: row;
-    }
-
     .filter-wrapper, .product-wrapper {
       width: 100%;
-      padding: 0 24px;
+      padding: 0;
     }
 
     .filter-wrapper {
@@ -114,4 +112,17 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: $display-lg) {
+  .product-catalogue {
+    .flex-row {
+      flex-direction: row;
+
+      .filter-wrapper, .product-wrapper {
+        padding: 0 24px
+      }
+    }
+  }
+}
+
 </style>

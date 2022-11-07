@@ -67,6 +67,7 @@
 
   @media screen and (min-width: $display-md) {
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
   }
 
   @media screen and (min-width: $display-lg) {
@@ -85,6 +86,7 @@
 
   @media screen and (min-width: $display-md) {
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
   }
 
   @media screen and (min-width: $display-lg) {

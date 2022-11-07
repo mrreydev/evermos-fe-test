@@ -12,6 +12,15 @@
   transition: 0.15 all;
   border-radius: 4px;
 
+  @media screen and (min-width: $display-md) {
+    padding: $btn-pd-md;
+    font-size: $fs-base;
+  }
+
+  @media screen and (min-width: $display-lg) {
+    padding: $btn-pd-lg;
+  }
+
   &-primary {
     background-color: $primary;
     color: $white;

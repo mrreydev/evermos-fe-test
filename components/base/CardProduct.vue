@@ -13,7 +13,7 @@ import mixin from '@/mixins'
 
 <template>
   <NuxtLink :to="`/products/${product.id}`" class="card">
-    <img :src="`/images/products/${product.image}.jpg`" alt="Nike 1" class="card-img">
+    <img :src="`/images/products/${product.image}.jpg`" class="card-img" :alt="`${product.name} Image`" placeholder loading="lazy"/>
     <div class="card-info">
       <h5 class="card-info__title">{{ product.brand }}</h5>
       <p class="card-info__text">{{ product.name }}</p>

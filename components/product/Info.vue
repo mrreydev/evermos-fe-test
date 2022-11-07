@@ -1,6 +1,6 @@
 <template>
   <div class="product-info-wrapper">
-    <h5 class="product-info__brand">
+    <h5 class="product-info__brand color-primary">
       {{ product.brand || '-' }}
     </h5>
     <p class="product-info__name">
@@ -13,7 +13,7 @@
       {{ formatRupiah(product.price) || '-' }}
     </h4>
     <div v-if="product.variants && product.variants.length" class="product-info__variant">
-      <p class="mb-8 font-base-normal">Varian</p>
+      <p class="mb-8 font-semibold">Varian</p>
       <div class="variants">
         <BaseRadioVariant v-for="(variant, index) in product.variants" :key="index" v-model="selectedVar" :label="variant" :value="variant" />
       </div>
@@ -132,6 +132,14 @@ import mixin from '@/mixins'
         display: flex;
         flex-wrap: wrap;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $display-lg) {
+  .product-info {
+    &-wrapper {
+      margin: auto 0 auto 24px;
     }
   }
 }

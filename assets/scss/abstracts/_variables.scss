@@ -31,6 +31,18 @@ $black-02: rgba(0, 0, 0, 0.6);
 $black-03: rgba(0, 0, 0, 0.3);
 $black-04: rgba(0, 0, 0, 0.1);
 
+$colors: (
+  "primary": $primary,
+  "dark-gray": $dark-gray,
+  "gray": $gray,
+  "white": $white,
+  "black-01": $black-01,
+  "black-02": $black-02,
+  "black-03": $black-03,
+  "black-04": $black-04,
+
+);
+
 
 // * Fonts * //
 // * Font Family

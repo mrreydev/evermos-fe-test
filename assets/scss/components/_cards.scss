@@ -4,6 +4,8 @@
   border: solid 1px $black-04;
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.3s;
+  background-color: $white;
 
   &-img {
     width: 100%;
@@ -31,5 +33,10 @@
       color: $primary;
       font-weight: $fw-semibold;
     }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 8px 20px $black-04;
   }
 }

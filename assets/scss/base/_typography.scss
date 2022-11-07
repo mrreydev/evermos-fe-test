@@ -18,6 +18,24 @@
   }
 }
 
+@each $nameS, $size in $font-sizes {
+  .font-#{$nameS} {
+    font-size: $size !important;
+  }
+}
+
+@each $nameW, $weight in $font-weights {
+  .font-#{$nameW} {
+    font-weight: $weight;
+  }
+}
+
+@each $color, $value in $colors {
+  .color-#{$color} {
+    color: $value;
+  }
+}
+
 * {
   font-family: $font-opensans;
 }
